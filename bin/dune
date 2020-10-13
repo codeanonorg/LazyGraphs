@@ -1,0 +1,3 @@
+(executable
+  (name example)
+  (libraries lazy_graph))

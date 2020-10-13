@@ -1,2 +1,5 @@
-(executable
-  (name transitions))
+(documentation)
+
+(library
+  (public_name LazyGraphs)
+  (name lazy_graph))
