@@ -1,6 +1,6 @@
 # LazyGraphs
 
-We investigate a new data structure called LazyGraphs together with algorithms to visit and modelize potentially infinite transition systems.
+We investigate a new data structure called LazyGraphs together with algorithms to model and visit potentially infinite transition systems.
 
 ## Compiling
 
@@ -25,6 +25,6 @@ _build/default/_doc/_html/index.html
 **Generating an example**
 
 ```
-dune exec ./bin/example.exe
+dune exec ./examples/example.exe
 ```
 

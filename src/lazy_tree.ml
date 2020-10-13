@@ -1,7 +1,8 @@
-type 'a lazy_tree =
-    LNode of 'a * (( string option *'a lazy_tree Lazy.t) list)
+type 'a t =
+    LNode of 'a * (string option * 'a t Lazy.t) list
 
-type 'a tree = Node of 'a * (string option * 'a tree) list
+type 'a tree =
+    Node of 'a * (string option * 'a tree) list
 
 let lnode a t = LNode (a, t)
 
@@ -14,6 +15,7 @@ let no_dup l = List.fold_left (fun acc x -> if List.mem x acc then acc else x::a
 let rec edges (Node (v, next)) =
   List.fold_left (fun acc (o, Node (v', _)) -> (v, o, v')::acc)
     (next |> List.map (fun (_, t) -> edges t) |> List.concat) next |> no_dup
+
 
 let dump pp f t =
   let out = open_out f in
