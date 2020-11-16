@@ -1,6 +1,6 @@
 # LazyGraphs
 
-We investigate a new data structure called LazyGraphs together with algorithms to model and visit potentially infinite transition systems.
+LazyGraph is an experiment arround lazy representation of graphs to model and visit potentially infinite transition systems.
 
 ## Compiling
 
